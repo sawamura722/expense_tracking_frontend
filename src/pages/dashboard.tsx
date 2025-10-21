@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useEffect, useMemo } from "react";
 import axios from "axios";
 import DatePicker from "react-datepicker";
@@ -31,7 +30,6 @@ const parseYMD = (s: string) => (s ? new Date(`${s}T00:00:00`) : null);
 
 const formatCurrency = (n: number) =>
   new Intl.NumberFormat("th", { style: "currency", currency: "THB" }).format(n);
-const formatDate = (d: Date | string) => new Date(d).toLocaleDateString();
 
 const Dashboard = () => {
   const [categories, setCategories] = useState<Category[]>([]);
